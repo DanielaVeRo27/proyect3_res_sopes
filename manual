@@ -2,6 +2,7 @@
 
 
 ## 1. Resumen Ejecutivo
+Sistema distribuido y escalable que simula el procesamiento de "tweets" sobre el clima local. Implementado con microservicios en Rust, Go, message brokers (Kafka y RabbitMQ), almacenamiento en memoria (Valkey) y visualización con Grafana.
 
 ### 1.1 Descripción General
 
