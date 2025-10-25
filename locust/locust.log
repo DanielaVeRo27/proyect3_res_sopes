@@ -1,0 +1,270 @@
+[2025-10-24 12:13:25,453] danilu-Inspiron-15-3535/INFO/locust.main: Starting Locust 2.42.0
+[2025-10-24 12:13:25,453] danilu-Inspiron-15-3535/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-10-24 12:13:35,162] danilu-Inspiron-15-3535/DEBUG/locust.main: Running teardowns...
+[2025-10-24 12:13:35,162] danilu-Inspiron-15-3535/INFO/locust.main: Shutting down (exit code 0)
+[2025-10-24 12:13:35,162] danilu-Inspiron-15-3535/DEBUG/locust.main: Cleaning up runner...
+[2025-10-24 12:13:35,211] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:13:35,211] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 0 still running
+[2025-10-24 12:13:44,875] danilu-Inspiron-15-3535/INFO/locust.main: Starting Locust 2.42.0
+[2025-10-24 12:13:44,875] danilu-Inspiron-15-3535/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-10-24 12:15:27,311] danilu-Inspiron-15-3535/INFO/locust.runners: Ramping to 2 users at a rate of 45.00 per second
+[2025-10-24 12:15:27,311] danilu-Inspiron-15-3535/DEBUG/locust.runners: Ramping to {"WeatherTweetUser": 2} (2 total users)
+[2025-10-24 12:15:27,311] danilu-Inspiron-15-3535/DEBUG/locust.runners: Spawning additional {"WeatherTweetUser": 2} ({"WeatherTweetUser": 0} already running)...
+[2025-10-24 12:15:27,312] danilu-Inspiron-15-3535/DEBUG/locust.runners: 2 users spawned
+[2025-10-24 12:15:27,312] danilu-Inspiron-15-3535/DEBUG/locust.runners: All users of class WeatherTweetUser spawned
+[2025-10-24 12:15:27,312] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 2 still running
+[2025-10-24 12:15:27,312] danilu-Inspiron-15-3535/INFO/locust.runners: All users spawned: {"WeatherTweetUser": 2} (2 total users)
+[2025-10-24 12:15:27,313] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.189:80
+[2025-10-24 12:15:27,314] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.189:80
+[2025-10-24 12:15:27,524] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:27,524] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:27,713] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:27,838] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:27,936] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:28,038] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:28,041] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:28,254] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:28,466] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:28,543] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:28,634] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:28,713] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:28,841] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:28,972] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:29,005] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:29,143] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:29,501] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:29,592] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:29,673] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:29,762] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:29,970] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:30,130] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:30,200] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:30,362] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:30,402] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:30,492] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:30,557] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:30,657] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:30,829] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:30,990] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:31,123] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:31,286] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:31,423] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:31,534] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:31,577] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:31,692] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:31,796] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:31,891] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:31,958] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:32,058] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:32,158] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:32,188] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:32,318] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:32,351] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:32,595] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:32,755] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:32,758] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:32,929] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:33,136] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:33,226] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:33,299] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:33,402] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:33,408] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:33,577] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:33,711] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:33,871] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:34,041] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:34,194] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:34,343] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:34,427] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:34,501] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:34,594] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:34,737] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:34,771] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:34,899] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:34,929] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:35,382] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:35,390] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:35,550] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:35,557] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:35,747] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:35,777] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:35,912] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:35,954] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:36,364] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:36,441] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:36,523] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:36,611] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:36,770] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:36,925] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:36,982] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:37,140] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:37,271] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:37,437] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:37,485] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:37,649] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:37,704] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:37,859] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:38,018] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:38,160] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:38,172] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:38,313] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:38,522] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:38,529] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:38,693] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:38,697] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:15:38,860] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:15:38,914] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:15:38,914] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-0
+[2025-10-24 12:15:38,915] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-1
+[2025-10-24 12:15:38,915] danilu-Inspiron-15-3535/DEBUG/locust.runners: 2 users have been stopped, 0 still running
+[2025-10-24 12:15:46,194] danilu-Inspiron-15-3535/DEBUG/locust.main: Running teardowns...
+[2025-10-24 12:15:46,195] danilu-Inspiron-15-3535/INFO/locust.main: Shutting down (exit code 1)
+[2025-10-24 12:15:46,195] danilu-Inspiron-15-3535/DEBUG/locust.main: Cleaning up runner...
+[2025-10-24 12:17:13,067] danilu-Inspiron-15-3535/INFO/locust.main: Starting Locust 2.42.0
+[2025-10-24 12:17:13,067] danilu-Inspiron-15-3535/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-10-24 12:17:41,679] danilu-Inspiron-15-3535/INFO/locust.runners: Ramping to 1 users at a rate of 45.00 per second
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/DEBUG/locust.runners: Ramping to {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/DEBUG/locust.runners: Spawning additional {"WeatherTweetUser": 1} ({"WeatherTweetUser": 0} already running)...
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users spawned
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/DEBUG/locust.runners: All users of class WeatherTweetUser spawned
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 1 still running
+[2025-10-24 12:17:41,680] danilu-Inspiron-15-3535/INFO/locust.runners: All users spawned: {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:17:41,681] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.1894:80
+[2025-10-24 12:17:42,325] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (2): 35.238.77.1894:80
+[2025-10-24 12:17:42,760] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (3): 35.238.77.1894:80
+[2025-10-24 12:17:43,408] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (4): 35.238.77.1894:80
+[2025-10-24 12:17:43,948] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (5): 35.238.77.1894:80
+[2025-10-24 12:17:44,442] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (6): 35.238.77.1894:80
+[2025-10-24 12:17:44,805] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (7): 35.238.77.1894:80
+[2025-10-24 12:17:45,139] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (8): 35.238.77.1894:80
+[2025-10-24 12:17:45,438] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (9): 35.238.77.1894:80
+[2025-10-24 12:17:45,637] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (10): 35.238.77.1894:80
+[2025-10-24 12:17:46,158] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (11): 35.238.77.1894:80
+[2025-10-24 12:17:46,734] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (12): 35.238.77.1894:80
+[2025-10-24 12:17:47,002] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (13): 35.238.77.1894:80
+[2025-10-24 12:17:47,177] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (14): 35.238.77.1894:80
+[2025-10-24 12:17:47,430] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (15): 35.238.77.1894:80
+[2025-10-24 12:17:48,855] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:17:48,856] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-0
+[2025-10-24 12:17:48,856] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users have been stopped, 0 still running
+[2025-10-24 12:18:00,877] danilu-Inspiron-15-3535/INFO/locust.runners: Ramping to 1 users at a rate of 15.00 per second
+[2025-10-24 12:18:00,877] danilu-Inspiron-15-3535/DEBUG/locust.runners: Ramping to {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:18:00,877] danilu-Inspiron-15-3535/DEBUG/locust.runners: Spawning additional {"WeatherTweetUser": 1} ({"WeatherTweetUser": 0} already running)...
+[2025-10-24 12:18:00,878] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users spawned
+[2025-10-24 12:18:00,878] danilu-Inspiron-15-3535/DEBUG/locust.runners: All users of class WeatherTweetUser spawned
+[2025-10-24 12:18:00,878] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 1 still running
+[2025-10-24 12:18:00,878] danilu-Inspiron-15-3535/INFO/locust.runners: All users spawned: {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:18:00,879] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.189:80
+[2025-10-24 12:18:01,120] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:01,326] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:01,530] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:01,904] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:02,175] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:02,621] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:02,860] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:03,130] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:03,379] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:03,683] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:03,895] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:04,000] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:04,281] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:04,726] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:04,896] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:05,348] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:05,541] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:05,832] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:18:05,832] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-1
+[2025-10-24 12:18:05,832] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users have been stopped, 0 still running
+[2025-10-24 12:18:15,881] danilu-Inspiron-15-3535/INFO/locust.runners: Ramping to 1 users at a rate of 15.00 per second
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/DEBUG/locust.runners: Ramping to {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/DEBUG/locust.runners: Spawning additional {"WeatherTweetUser": 1} ({"WeatherTweetUser": 0} already running)...
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users spawned
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/DEBUG/locust.runners: All users of class WeatherTweetUser spawned
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 1 still running
+[2025-10-24 12:18:15,882] danilu-Inspiron-15-3535/INFO/locust.runners: All users spawned: {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:18:15,883] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.189:80
+[2025-10-24 12:18:16,070] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:16,371] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:16,591] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:16,752] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:16,974] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:17,312] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:17,504] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:17,784] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:18,018] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:18,514] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:18,681] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:18,824] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:19,006] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:19,281] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:19,440] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:19,564] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:19,724] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:19,947] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:20,100] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:20,597] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:20,756] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:20,883] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:21,054] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:21,304] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:21,463] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:21,633] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:21,795] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets/api/tweets HTTP/1.1" 404 0
+[2025-10-24 12:18:22,066] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Resetting dropped connection: 35.238.77.189
+[2025-10-24 12:18:22,212] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:18:22,212] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-2
+[2025-10-24 12:18:22,213] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users have been stopped, 0 still running
+[2025-10-24 12:19:10,920] danilu-Inspiron-15-3535/DEBUG/locust.main: Running teardowns...
+[2025-10-24 12:19:10,920] danilu-Inspiron-15-3535/INFO/locust.main: Shutting down (exit code 1)
+[2025-10-24 12:19:10,920] danilu-Inspiron-15-3535/DEBUG/locust.main: Cleaning up runner...
+[2025-10-24 12:20:33,742] danilu-Inspiron-15-3535/INFO/locust.main: Starting Locust 2.42.0
+[2025-10-24 12:20:33,742] danilu-Inspiron-15-3535/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/INFO/locust.runners: Ramping to 1 users at a rate of 15.00 per second
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/DEBUG/locust.runners: Ramping to {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/DEBUG/locust.runners: Spawning additional {"WeatherTweetUser": 1} ({"WeatherTweetUser": 0} already running)...
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users spawned
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/DEBUG/locust.runners: All users of class WeatherTweetUser spawned
+[2025-10-24 12:20:39,222] danilu-Inspiron-15-3535/DEBUG/locust.runners: 0 users have been stopped, 1 still running
+[2025-10-24 12:20:39,223] danilu-Inspiron-15-3535/INFO/locust.runners: All users spawned: {"WeatherTweetUser": 1} (1 total users)
+[2025-10-24 12:20:39,223] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: Starting new HTTP connection (1): 35.238.77.189:80
+[2025-10-24 12:20:39,632] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:40,357] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:40,972] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:41,586] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:42,601] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:43,324] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:43,834] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:44,239] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:44,793] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:45,122] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:45,528] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 62
+[2025-10-24 12:20:45,900] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:46,518] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:46,983] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:47,332] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:48,016] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:48,334] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:48,954] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:49,425] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:49,896] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:50,331] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:50,820] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:51,225] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:51,831] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:52,228] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:52,723] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:53,289] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:53,927] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:54,421] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:54,929] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:55,392] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:55,720] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:56,229] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:56,586] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:57,130] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:57,525] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:58,082] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:58,498] danilu-Inspiron-15-3535/DEBUG/urllib3.connectionpool: http://35.238.77.189:80 "POST /api/tweets HTTP/1.1" 200 63
+[2025-10-24 12:20:58,731] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping all users (called from /home/danilu/proyectos/proyecto3/locust/venv/lib/python3.12/site-packages/locust/runners.py:551)
+[2025-10-24 12:20:58,731] danilu-Inspiron-15-3535/DEBUG/locust.runners: Stopping Greenlet-0
+[2025-10-24 12:20:58,732] danilu-Inspiron-15-3535/DEBUG/locust.runners: 1 users have been stopped, 0 still running

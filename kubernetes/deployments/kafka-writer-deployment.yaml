@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-writer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-writer
+  template:
+    metadata:
+      labels:
+        app: kafka-writer
+    spec:
+      containers:
+      - name: kafka-writer
+        image: stereoisomeric-emblematic-marcelina.ngrok-free.dev/kafka-writer:v1
+        ports:
+        - containerPort: 50052
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 300m
+            memory: 256Mi

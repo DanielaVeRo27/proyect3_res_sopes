@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "./;main";
+
+service RabbitmqWriter {
+  rpc PublishToRabbitMQ(RabbitmqMessage) returns (RabbitmqResponse);
+}
+
+message RabbitmqMessage {
+  string municipality = 1;
+  int32 temperature = 2;
+  int32 humidity = 3;
+  string weather = 4;
+}
+
+message RabbitmqResponse {
+  string status = 1;
+  string message = 2;
+}

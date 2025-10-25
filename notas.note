@@ -1,0 +1,105 @@
+== COSAS RALIZADAS ==
+  - Creación del proyecto inicial
+  - Primero hicimos el Api con Rust que se comunica con Proto y manda las cosas a Go (Go server)
+    < El api Rust no se comunica directamente con el PROTO (se hace el build.rs)
+  - Luego creamos el Servicio de go que recibe los datos desde el Api-Rust
+     < esta en go1 -Orchestrator
+     < go mod tidy  --> luego  go run main.go
+
+  2. Hacemos el locust (python)
+     - A. Locust  -> locustfile.py
+        - Creamos un entorno virtual
+            2.1. En la terminal:
+                - cd ~/proyectos/proyecto3/locust
+                - python3 -m venv venv
+                - source venv/bin/activate
+        - Instalamos locust
+            2.2. En la terminal:
+                - pip install locust
+                -locust -f locustfile.py --host http://localhost:8080 --users 5 --spawn-rate 2
+
+
+
+
+== PRUEBAS DE API RUST ==
+    
+    A. danilu@danilu-Inspiron-15-3535:~/proyectos/proyecto3/api-rust$ curl -X POST http://localhost:8080/api/tweets \to3/api-rust$ curl -X POST http://localhost:8080/api/tweets \
+        -H "Content-Type: application/json" \
+        -d '{
+            "municipality": "mixco",
+            "temperature": 28,
+            "humidity": 75,
+            "weather": "rainy"
+        }'
+
+
+== COSAS QUE CORRI ==
+
+== Consumidor de Kafka en Go ==
+    -  En la terminal:
+        - cd ~/proyectos/proyecto3/go-services/kafka-consumer
+        - go mod init github.com/proyecto3/kafka-consumer
+        - go get github.com/segmentio/kafka-go
+        - go get github.com/redis/go-redis/v9
+        - cd ~/proyectos/proyecto3/go-services/kafka-consumer
+        - go mod tidy
+        - go build
+== Consumidor de rabbitmq en Go ==
+    -  En la terminal:
+        - cd ~/proyectos/proyecto3/go-services/rabbitmq-consumer
+        - go mod init github.com/proyecto3/rabbitmq-consumer
+        - go get github.com/rabbitmq/amqp091-go
+        - go get github.com/redis/go-redis/v9
+        - cd ~/proyectos/proyecto3/go-services/rabbitmq-consumer
+        - go mod tidy
+        - go build
+
+== Borrar en redi s ==
+    - En la terminal de redis-cli:
+        - FLUSHALL
+    redis-cli FLUSHDB          # borra sincrónicamente
+# o más seguro si hay muchas keys:
+redis-cli FLUSHDB ASYNC    # borra en background
+
+
+== Conceptos === A. DUDASSSS 
+
+    -  ¿Qué es un build.rs en Rust y para qué se utiliza?
+        - Un build.rs es un script de construcción personalizado en Rust que se ejecuta antes de compilar el código principal. Se utiliza para realizar tareas como la generación de código, la configuración del entorno de compilación o la inclusión de archivos adicionales necesarios para el proyecto.
+    -  ¿Cómo se integra Rust con Protocol Buffers (Proto) en un proyecto?
+        - La integración de Rust con Protocol Buffers se realiza utilizando bibliotecas como prost o protobuf
+            que permiten la generación de código Rust a partir de archivos .proto. El build.rs puede ser utilizado para automatizar este proceso durante la compilación.
+    -  ¿Cuál es el propósito de utilizar Locust en pruebas de rendimiento?
+        - Locust es una herramienta de pruebas de carga y rendimiento que permite simular múltiples usuarios
+            interactuando con una aplicación web. Se utiliza para evaluar cómo se comporta la aplicación bajo diferentes niveles de carga y para identificar posibles cuellos de botella o problemas de rendimiento.
+    -  ¿Cómo se configura un entorno virtual en Python y por qué es importante?
+        - Un entorno virtual en Python se configura utilizando herramientas como venv o virtualenv. Se
+            crea un entorno aislado donde se pueden instalar paquetes específicos sin afectar el entorno global de Python. Esto es importante para evitar conflictos entre dependencias de diferentes proyectos y para mantener un entorno limpio y controlado.
+    -  ¿Qué es Kafka y cómo se utiliza en aplicaciones Go?
+        - Kafka es una plataforma de mensajería distribuida que permite la transmisión de datos en
+            tiempo real. En aplicaciones Go, se utiliza mediante bibliotecas como segmentio/kafka-go para producir y consumir mensajes desde topics de Kafka, facilitando la comunicación entre diferentes servicios y componentes de una aplicación.
+    -  ¿Cómo se implementa un consumidor de RabbitMQ en Go?
+        -Un consumidor de RabbitMQ en Go se implementa utilizando bibliotecas como rabbitmq/am
+            qp091-go. El consumidor se conecta a un servidor RabbitMQ, se suscribe a una cola específica y procesa los mensajes recibidos, permitiendo la integración de sistemas y la comunicación asíncrona entre servicios.
+    
+    A. deployment
+    Un deployment (en español, despliegue) es el proceso de poner una aplicación o sistema en funcionamiento en un entorno real o de producción para que los usuarios puedan acceder y utilizarlo.
+
+Dicho de forma simple:
+👉 Es el paso de “subir” tu aplicación desde tu computadora (desarrollo) hacia un servidor o la nube (producción
+
+
+===== LIMPIAR LA BASE DE DATOS =======
+# Primero veamos qué hay
+kubectl exec -it pod/valkey-redis-master-0 -- redis-cli KEYS "*"
+
+# Luego eliminamos todo
+kubectl exec -it pod/valkey-redis-master-0 -- redis-cli KEYS "*" | xargs kubectl exec -it pod/valkey-redis-master-0 -- redis-cli DEL
+
+g2070067330101@cloudshell:~ (proyecto3-sopes1)$ kubectl exec -it pod/valkey-redis-master-0 -- redis-cli EVAL "for _,k in ipairs(redis.call('keys','*')) do redis.call('del',k) end" 0
+
+kubectl exec -it pod/valkey-redis-master-0 -- redis-cli KEYS "*"
+# Debería devolver una lista vacía: (empty list or set)
+
+# Ver la IP externa de Grafana
+kubectl get service grafana

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-writer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq-writer
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-writer
+    spec:
+      containers:
+      - name: rabbitmq-writer
+        image: stereoisomeric-emblematic-marcelina.ngrok-free.dev/rabbitmq-writer:v1
+        ports:
+        - containerPort: 50053
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 300m
+            memory: 256Mi

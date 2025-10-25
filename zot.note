@@ -1,0 +1,30 @@
+== INSTALACION DEL ZOT en la Vm ==
+    - En la terminal:
+        # Actualizar sistema
+        sudo apt update && sudo apt upgrade -y
+
+        # Instalar Docker
+        sudo apt install -y docker.io
+
+        # Iniciar Docker
+        sudo systemctl start docker
+        sudo systemctl enable docker
+
+        # Agregar tu usuario al grupo docker
+        sudo usermod -aG docker $USER
+
+        newgrp docker
+        
+        # Descargar y correr Zot
+        docker run -d -p 5000:5000 --name zot-registry \
+            -v /var/lib/zot:/var/lib/registry \
+            ghcr.io/project-zot/zot-linux-amd64:latest
+
+
+docker build -t stereoisomeric-emblematic-marcelina.ngrok-free.dev/kafka-consumer:v3 .
+
+# 3. Empuja a Zot
+docker push stereoisomeric-emblematic-marcelina.ngrok-free.dev/kafka-consumer:v3
+
+# 4. Actualiza el deployment
+kubectl set image deployment/kafka-consumer kafka-consumer=stereoisomeric-emblematic-marcelina.ngrok-free.dev/kafka-consumer:v3

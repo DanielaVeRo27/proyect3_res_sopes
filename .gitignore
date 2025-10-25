@@ -1,0 +1,46 @@
+# Ignore Python virtual environments
+venv/
+env/
+.venv/
+locust/venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Rust target
+target/
+
+# Go build outputs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Node
+node_modules/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+
+# env files
+.env
+env.local
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/

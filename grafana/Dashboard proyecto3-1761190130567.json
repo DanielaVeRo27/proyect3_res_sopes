@@ -1,0 +1,919 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "dash proyecto 3 - 201902559\n- Luisa Velásquez ",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "Grafica que muestra la humedad promedio por municipio ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic-by-name"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "noValue": "no data",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "maxVizHeight": 71,
+        "minVizHeight": 48,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "manual",
+        "text": {},
+        "valueMode": "color"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "field": "mixco",
+          "keyName": "municipality:mixco:humedad:avg",
+          "query": "",
+          "refId": "A",
+          "streaming": false,
+          "streamingDataType": "DataFrame",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "field": "guatemala",
+          "hide": false,
+          "keyName": "municipality:guatemala:humedad:avg",
+          "query": "",
+          "refId": "B",
+          "streaming": false,
+          "streamingDataType": "DataFrame",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "municipality:amatitlan:humedad:avg",
+          "query": "",
+          "refId": "C",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "municipality:chinautla:humedad:avg",
+          "query": "",
+          "refId": "D",
+          "type": "command"
+        }
+      ],
+      "title": "Humedad Promedio por municipio ",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "temperatura mas Baja registrada en general ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "metrics:temperature:min",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Temperaruta minima ",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "temperatura mas Baja registrada en general ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "metrics:humedad:min",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Humedad minima ",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "temperatura mas Alta registrada en general ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 4
+      },
+      "id": 7,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "metrics:temperature:max",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Temperaruta maxima ",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "Humedad mas Alta registrada en general ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 4
+      },
+      "id": 9,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "metrics:humedad:max",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Humedad maxima ",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "Grafica que muestra la temperatura promedio por municipio ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "noValue": "-no data",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 9,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "maxVizHeight": 71,
+        "minVizHeight": 48,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "manual",
+        "text": {},
+        "valueMode": "color"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "field": "mixco",
+          "keyName": "municipality:mixco:temperature:avg",
+          "query": "",
+          "refId": "A",
+          "streaming": false,
+          "streamingDataType": "DataFrame",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "field": "guatemala",
+          "hide": false,
+          "keyName": "municipality:guatemala:temperature:avg",
+          "query": "",
+          "refId": "B",
+          "streaming": false,
+          "streamingDataType": "DataFrame",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "municipality:amatitlan:temperature:avg",
+          "query": "",
+          "refId": "C",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "municipality:chinautla:temperature:avg",
+          "query": "",
+          "refId": "D",
+          "type": "command"
+        }
+      ],
+      "title": "Temperatura Promedio por municipio ",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "muestra el total de tweet por condicion climatica del municipo de chinautla",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 15,
+        "x": 9,
+        "y": 8
+      },
+      "id": 5,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "maxVizHeight": 73,
+        "minVizHeight": 47,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "showUnfilled": true,
+        "sizing": "manual",
+        "valueMode": "text"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "keyName": "clima:sunny:count",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "clima:cloudy:count",
+          "query": "",
+          "refId": "B",
+          "sortDirection": "ASC",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "clima:rainy:count",
+          "query": "",
+          "refId": "C",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "clima:foggy:count",
+          "query": "",
+          "refId": "D",
+          "type": "command"
+        }
+      ],
+      "title": "Reporte de condición climática",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "muestra el total de tweet por condicion climatica del municipo de chinautla",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 1,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "keyName": "weather:chinautla:sunny",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "weather:chinautla:cloudy",
+          "query": "",
+          "refId": "B",
+          "sortDirection": "ASC",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "weather:chinautla:rainy",
+          "query": "",
+          "refId": "C",
+          "type": "command"
+        },
+        {
+          "command": "get",
+          "datasource": {
+            "type": "redis-datasource",
+            "uid": "af1kkzgg17w8wa"
+          },
+          "hide": false,
+          "keyName": "weather:chinautla:foggy",
+          "query": "",
+          "refId": "D",
+          "type": "command"
+        }
+      ],
+      "title": "Chinautla- total de reporte por clima ",
+      "type": "gauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 0,
+        "y": 24
+      },
+      "id": 10,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "# 201902559",
+        "mode": "markdown"
+      },
+      "pluginVersion": "12.2.0",
+      "title": "#CARNET",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "Clima mas comun registrada en el municipio asignado ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 9,
+        "x": 5,
+        "y": 24
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "municipality:chinautla:weather:most_common",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "clima mas comun",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "redis-datasource",
+        "uid": "af1kkzgg17w8wa"
+      },
+      "description": "Clima  Menos comun registrada en el municipio asignado ",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 10,
+        "x": 14,
+        "y": 24
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "command": "get",
+          "keyName": "municipality:chinautla:weather:least_common",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Clima menos comun",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 0,
+        "y": 27
+      },
+      "id": 2,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "# Chinautla\n\n#### nombre del municipio asignado \n#### 201902559\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "12.2.0",
+      "title": "Municipio asignado",
+      "type": "text"
+    }
+  ],
+  "preload": false,
+  "refresh": "auto",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-3s",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Dashboard proyecto3",
+  "uid": "ad6x2jc",
+  "version": 47
+}

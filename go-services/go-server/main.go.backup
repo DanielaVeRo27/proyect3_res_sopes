@@ -1,0 +1,144 @@
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"log"
+	"net"
+	"net/http"
+	"sync/atomic"
+
+	amqp "github.com/rabbitmq/amqp091-go"
+	"github.com/segmentio/kafka-go"
+	"google.golang.org/grpc"
+)
+
+type WeatherTweet struct {
+	Municipality string `json:"municipality"`
+	Temperature  int32  `json:"temperature"`
+	Humidity     int32  `json:"humidity"`
+	Weather      string `json:"weather"`
+}
+
+type Response struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+}
+
+var requestCount int64
+var kafkaWriter *kafka.Writer
+var rabbitmqChannel *amqp.Channel
+
+func init() {
+	// Inicializar Kafka
+	kafkaWriter = kafka.NewWriter(kafka.WriterConfig{
+		Brokers: []string{"my-cluster-kafka-bootstrap.kafka:9092"},
+		Topic:   "weather-tweets",
+	})
+
+	// Inicializar RabbitMQ
+	conn, err := amqp.Dial("amqp://default_user_pSqIHyPHkVx5_JyTINs:OKVZmdiOw6vAteDhXJ7z3sTIwFtguUCs@rabbitmq-cluster:5672/")
+	if err != nil {
+		log.Printf("Warning: Could not connect to RabbitMQ: %v\n", err)
+	} else {
+		rabbitmqChannel, err = conn.Channel()
+		if err != nil {
+			log.Printf("Warning: Could not open RabbitMQ channel: %v\n", err)
+		} else {
+			rabbitmqChannel.QueueDeclare("weather-tweets", false, false, false, false, nil)
+		}
+	}
+}
+
+func handleTweets(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	var tweet WeatherTweet
+	err := json.NewDecoder(r.Body).Decode(&tweet)
+	if err != nil {
+		http.Error(w, "Invalid JSON", http.StatusBadRequest)
+		return
+	}
+
+	count := atomic.AddInt64(&requestCount, 1)
+
+	fmt.Printf("[Go Orchestrator - Request #%d] Received from Rust: %s, %d°C, %d%% humidity, %s weather\n",
+		count, tweet.Municipality, tweet.Temperature, tweet.Humidity, tweet.Weather)
+
+	// Publicar a Kafka
+	publishToKafka(&tweet)
+
+	// Publicar a RabbitMQ
+	publishToRabbitMQ(&tweet)
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(Response{
+		Status:  "success",
+		Message: fmt.Sprintf("Processed and published (Request #%d)", count),
+	})
+}
+
+func publishToKafka(tweet *WeatherTweet) {
+	data, _ := json.Marshal(tweet)
+	msg := kafka.Message{
+		Key:   []byte(tweet.Municipality),
+		Value: data,
+	}
+	kafkaWriter.WriteMessages(context.Background(), msg)
+	fmt.Printf("  ✅ Published to Kafka\n")
+}
+
+func publishToRabbitMQ(tweet *WeatherTweet) {
+	if rabbitmqChannel == nil {
+		return
+	}
+	data, _ := json.Marshal(tweet)
+	rabbitmqChannel.Publish(
+		"",
+		"weather-tweets",
+		false,
+		false,
+		amqp.Publishing{
+			ContentType: "application/json",
+			Body:        data,
+		},
+	)
+	fmt.Printf("  ✅ Published to RabbitMQ\n")
+}
+
+func handleHealth(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]string{"status": "healthy"})
+}
+
+func main() {
+	fmt.Println("🚀 Starting Go Orchestrator Service on 0.0.0.0:8081")
+
+	http.HandleFunc("/tweets", handleTweets)
+	http.HandleFunc("/health", handleHealth)
+
+	go startGRPCServer()
+
+	err := http.ListenAndServe("0.0.0.0:8081", nil)
+	if err != nil {
+		log.Fatalf("HTTP Server error: %v", err)
+	}
+}
+
+func startGRPCServer() {
+	listener, err := net.Listen("tcp", "0.0.0.0:50051")
+	if err != nil {
+		log.Fatalf("Failed to listen on port 50051: %v", err)
+	}
+
+	grpcServer := grpc.NewServer()
+	fmt.Println("📡 gRPC Server listening on 0.0.0.0:50051")
+
+	if err := grpcServer.Serve(listener); err != nil {
+		log.Fatalf("gRPC Server error: %v", err)
+	}
+}

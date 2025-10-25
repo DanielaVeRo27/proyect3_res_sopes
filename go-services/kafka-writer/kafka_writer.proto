@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "./;main";
+
+service KafkaWriter {
+  rpc PublishToKafka(KafkaMessage) returns (KafkaResponse);
+}
+
+message KafkaMessage {
+  string municipality = 1;
+  int32 temperature = 2;
+  int32 humidity = 3;
+  string weather = 4;
+}
+
+message KafkaResponse {
+  string status = 1;
+  string message = 2;
+}

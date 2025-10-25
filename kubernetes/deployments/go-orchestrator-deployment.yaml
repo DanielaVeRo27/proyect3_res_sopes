@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-orchestrator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-orchestrator
+  template:
+    metadata:
+      labels:
+        app: go-orchestrator
+    spec:
+      containers:
+      - name: go-orchestrator
+        image: stereoisomeric-emblematic-marcelina.ngrok-free.dev/go-orchestrator:v1
+        ports:
+        - containerPort: 8081
+        - containerPort: 50051

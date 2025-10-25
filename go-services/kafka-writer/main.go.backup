@@ -1,0 +1,92 @@
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"log"
+	"net"
+
+	"github.com/segmentio/kafka-go"
+	"google.golang.org/grpc"
+)
+
+type WeatherTweet struct {
+	Municipality string `json:"municipality"`
+	Temperature  int32  `json:"temperature"`
+	Humidity     int32  `json:"humidity"`
+	Weather      string `json:"weather"`
+}
+
+var kafkaWriter *kafka.Writer
+
+// Implementación del servidor gRPC
+type kafkaWriterServer struct {
+	UnimplementedKafkaWriterServer
+}
+
+func (s *kafkaWriterServer) PublishToKafka(ctx context.Context, req *KafkaMessage) (*KafkaResponse, error) {
+	tweet := WeatherTweet{
+		Municipality: req.Municipality,
+		Temperature:  req.Temperature,
+		Humidity:     req.Humidity,
+		Weather:      req.Weather,
+	}
+
+	data, err := json.Marshal(tweet)
+	if err != nil {
+		return &KafkaResponse{
+			Status:  "error",
+			Message: fmt.Sprintf("Error marshaling: %v", err),
+		}, err
+	}
+
+	msg := kafka.Message{
+		Key:   []byte(tweet.Municipality),
+		Value: data,
+	}
+
+	err = kafkaWriter.WriteMessages(ctx, msg)
+	if err != nil {
+		fmt.Printf("❌ Error writing to Kafka: %v\n", err)
+		return &KafkaResponse{
+			Status:  "error",
+			Message: fmt.Sprintf("Error publishing: %v", err),
+		}, err
+	}
+
+	fmt.Printf("[Kafka Writer] Published: %s - %d°C\n", tweet.Municipality, tweet.Temperature)
+
+	return &KafkaResponse{
+		Status:  "success",
+		Message: "Published to Kafka",
+	}, nil
+}
+
+func main() {
+	fmt.Println("🚀 Starting Go Kafka Writer Service")
+
+	// Inicializar Kafka Writer
+	kafkaWriter = kafka.NewWriter(kafka.WriterConfig{
+		Brokers: []string{"my-cluster-kafka-bootstrap.kafka:9092"},
+		Topic:   "weather-tweets",
+	})
+	defer kafkaWriter.Close()
+
+	fmt.Println("✅ Connected to Kafka on my-cluster-kafka-bootstrap.kafka:9092")
+
+	// Iniciar servidor gRPC
+	listener, err := net.Listen("tcp", "0.0.0.0:50052")
+	if err != nil {
+		log.Fatalf("Failed to listen on port 50052: %v", err)
+	}
+
+	grpcServer := grpc.NewServer()
+	RegisterKafkaWriterServer(grpcServer, &kafkaWriterServer{})
+
+	fmt.Println("📡 gRPC Server listening on 0.0.0.0:50052")
+
+	if err := grpcServer.Serve(listener); err != nil {
+		log.Fatalf("gRPC Server error: %v", err)
+	}
+}

@@ -1,0 +1,72 @@
+🧩 1. Cluster
+
+Un cluster es un grupo de computadoras (o servidores) que trabajan juntas como si fueran una sola.
+👉 Ejemplo: imagina 3 computadoras conectadas que reparten el trabajo entre ellas para que una aplicación funcione más rápido o no se caiga si una falla.
+
+☸️ 2. Kubernetes
+
+Kubernetes (a veces abreviado K8s) es una plataforma que organiza y administra aplicaciones en contenedores (como los de Docker).
+👉 Piensa que es como el “jefe” que decide en qué computadora del cluster se ejecuta cada aplicación, cómo se reinicia si falla y cuántas copias tener.
+
+🔁 3. Réplica
+
+Una réplica es una copia de una aplicación o contenedor que se ejecuta al mismo tiempo.
+👉 Ejemplo: si tu página web tiene 3 réplicas, hay 3 copias funcionando; si una se cae, las otras siguen sirviendo a los usuarios.
+
+⚙️ 4. Deployment
+
+Un deployment es una forma de decirle a Kubernetes cómo quieres que corra tu aplicación: cuántas réplicas, qué imagen usar, cómo actualizarla, etc.
+👉 Es como un “plan de despliegue” para mantener tu app viva y actualizada automáticamente.
+
+📄 5. YML (YAML)
+
+Un archivo .yml o .yaml es un archivo de texto donde se escriben configuraciones de manera ordenada (con sangrías y guiones).
+👉 En Kubernetes, los .yml se usan para decirle al sistema qué quieres que haga (por ejemplo, definir un Deployment o un Service).
+
+🌐 6. NginX Ingress Controller
+
+Un NginX Ingress Controller es una puerta de entrada al cluster.
+👉 Controla cómo entran las peticiones desde Internet hacia las aplicaciones dentro de Kubernetes.
+Por ejemplo: si tienes tres apps (web, API y admin), NginX decide a cuál enviar cada petición según la dirección (como un portero).
+
+📈 7. HPA (Horizontal Pod Autoscaler)
+
+El HPA sirve para aumentar o reducir automáticamente las réplicas de una aplicación según la carga de trabajo.
+👉 Ejemplo: si hay muchos usuarios, Kubernetes crea más copias; si hay pocos, las elimina.
+
+📉 8. VPA (Vertical Pod Autoscaler)
+
+El VPA ajusta los recursos (CPU y memoria) de tus contenedores automáticamente según lo que necesitan.
+👉 Ejemplo: si una app empieza a usar mucha memoria, VPA puede darle más sin que tú lo hagas manualmente.
+
+💬 9. Kafka
+
+Kafka es una plataforma de mensajería que sirve para enviar y recibir datos en tiempo real entre sistemas.
+👉 Ejemplo: una app manda mensajes (como “nuevo usuario registrado”) y otra app los recibe y los procesa después.
+
+🐇 10. Rabbit (RabbitMQ)
+
+RabbitMQ también es una plataforma de mensajería, parecida a Kafka, pero más simple.
+👉 Se usa cuando una app necesita enviar tareas a otra sin esperarla (por ejemplo, una web manda un correo sin detenerse a esperar que se envíe).
+
+🧠 11. gRPC
+
+gRPC (se pronuncia “G-R-P-C”) es una forma rápida y eficiente para que dos programas se comuniquen entre sí a través de la red.
+👉 Ejemplo: una app de frontend puede pedirle datos a un microservicio backend usando gRPC en lugar de HTTP.
+
+🐳 12. Zot
+
+Zot es un servidor de contenedores (registry) rápido y seguro.
+👉 Sirve para almacenar y compartir imágenes de contenedores, parecido a Docker Hub, pero optimizado y más ligero.
+
+☕ 13. Strimzi
+
+Strimzi es una herramienta que ayuda a ejecutar Kafka dentro de Kubernetes.
+👉 Hace más fácil instalar, configurar y mantener Kafka en un cluster sin hacerlo todo a mano.
+
+🐝 14. Locust
+
+Locust es una herramienta para hacer pruebas de carga (simula muchos usuarios usando tu aplicación).
+👉 Así puedes ver si tu sistema aguanta 10, 100 o 1000 usuarios al mismo tiempo.
+
+¿Quieres que te haga un resumen visual tipo mapa mental o tabla comparativa con todos estos conceptos para estudiar más fácil?
